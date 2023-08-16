@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        .main{
+    width: 100%;
+    height: 600px;
+    background-color: darkgrey;
+    padding-top: 200px;
+    position: fixed;
+    
+    
+    
+}.main.poster{
+    width: 370px;
+    height: 480px;
+    border-radius: 80px  rgb(183, 221, 13);
+    
+    
+    margin-left: 800px;
+    position: fixed;
+
+ } .poster{
+    width: 360px;
+    height: 540px;
+    border-radius: 80px  rgb(183, 221, 13);
+    float: right;
+    margin-right: 650px;
+    margin-left: 600px;
+    background-color:rgb(123, 121, 128);
+    padding: 20px 20px 10px 20px;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px; 
+    box-shadow: 80px black;
+    position: fixed;
+ }
+ .text{
+    width: 330px;
+    height: 50px;
+    box-shadow: 4px 10px 10px 1px rgb(185, 184, 184);
+    font-size: 19px;
+} table{
+    width: 340px;
+    height: 420px;
+    background-color:rgb(179, 178, 182);
+    box-shadow: 5px 2px 1px 1px gray;
+    /* border: 4px solid grey; */
+}input{
+    width:70px;
+    height: 90px;
+    border-radius: 10px;
+    font-size: 19px;
+    background-color:grey;
+    
+    box-shadow: 0px 4px 4px 0px grey; 
+}h1{
+    margin-left: 150px;
+    font-size: 70px;
+    float: left;
+    padding-top: 0px;
+    position: fixed;
+}.s{
+    width: 10px;
+    height: 200px;
+    background-color: black;
+    border-radius: 30px;
+    float: left;
+    padding-top: 200px;
+    margin-top: 70px;
+    margin-left: 100px;
+    position: fixed;
+}
+
+    </style>
+        
+</head>
+<body>
+    <div class="main">
+        <div class="s"></div>
+        <h1>create<br><br>calculator<br><br>javascript</h1>
+
+        <div class="poster">
+            <form name="show">
+                <input style="background-color: rgb(168, 175, 175);" name="text" class="text" placeholder="0">
+              </form>
+         
+            <table>
+              <tr>
+                  <td> <input style="color: blue;" type="button" name="btn" value="c" onclick="document.getElementById=document.show.text.value=''"> </td>
+                  <td> <input style="color: blue;" type="button" name="btn" value="b" onclick="document.getElementById=backspace()"> </td>
+                  <td><input style="color: blue;" type="button" value="%" onclick="document.getElementById= insert('%')"></td>
+                  <td> <input style="color: blue;" type="button" value="/" onclick="document.getElementById= insert('/')"></td>
+              </tr>
+              <tr>
+                  <td><input type="button" value="7" onclick="document.getElementById= insert('7')"> </td>
+                  <td><input type="button" value="8" onclick="document.getElementById= insert('8')"> </td>
+                  <td><input type="button" value="9" onclick="document.getElementById= insert('9')"> </td>
+                  <td><input style="color: blue;" type="button" value="*" onclick="document.getElementById= insert('*')"> </td>
+              </tr>
+              <tr>
+                  <td><input type="button" value="4" onclick="document.getElementById= insert('4')"> </td>
+                  <td><input type="button" value="5" onclick="document.getElementById= insert('5')"> </td>
+                  <td><input type="button" value="6" onclick="document.getElementById= insert('6')"> </td>
+                  <td><input style="color: blue;" type="button" value="-" onclick="document.getElementById= insert('-')"> </td>
+              </tr>
+              <tr>
+                  <td><input type="button" value="1" onclick="document.getElementById= insert('1')"> </td>
+                  <td><input type="button" value="2" onclick="document.getElementById= insert('2')"> </td>
+                  <td><input type="button" value="3" onclick="document.getElementById= insert('3')"> </td>
+                  <td><input style="color: blue;" type="button" value="+" onclick="document.getElementById= insert('+')"> </td>
+              </tr>
+              <tr>
+                
+                  <td><input type="button" value="0" onclick="document.getElementById= insert('0')"> </td>
+                  <td><input type="button" value="00" onclick="document.getElementById= insert('00')"> </td>
+                  <td><input style="color: blue;" type="button" value="." onclick="document.getElementById= insert('.')"> </td>
+                  <td><input style="color: blue;" type="button" value="=" onclick="document.getElementById= equal()"> </td>
+              </tr>
+            </table>
+        </div>
+    </div>
+    
+    
+     <script>
+        function insert(data){
+  document.show.text.value = document.show.text.value+data;
+} 
+function equal(){
+  var d=document.show.text.value;
+  document.show.text.value= eval(d);
+}
+function backspace(){
+  var d1=document.show.text.value ;
+  document.show.text.value=d1.substring(0,d1.length-1)
+}
+     </script>
+</body>
+</html>
